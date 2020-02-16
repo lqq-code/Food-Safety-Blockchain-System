@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<c3p0-config>
+    <default-config> 
+        <property name="jdbcUrl">
+            <![CDATA[
+                jdbc:mysql://localhost:3306/blockchain?autoReconnect=true
+            ]]>
+        </property>
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <property name="user">root</property>
+        <property name="password">123456</property> 
+　　     <!--当连接池中的连接耗尽的时候c3p0一次同时获取的连接数。Default: 3 -->
+        <property name="acquireIncrement">3</property>
+　　     <!-- 初始化数据库连接池时连接的数量 -->
+        <property name="initialPoolSize">10</property>
+        <!-- 数据库连接池中的最小的数据库连接数 -->
+        <property name="minPoolSize">2</property>
+        <!-- 数据库连接池中的最大的数据库连接数 -->
+        <property name="maxPoolSize">80</property>
+    </default-config>
+</c3p0-config>
